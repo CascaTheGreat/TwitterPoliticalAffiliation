@@ -1,17 +1,6 @@
 import Scraper
 import re
 from werkzeug.datastructures import ImmutableMultiDict
-def score(tweet):
-  lr_word_count = 1
-  al_word_count = 1
-  pol_scores = {"left": 0,"right": 0, "auth": 0, "liberal": 0}
-  for dict_key in pol_scores:
-    if dict_key == "left" or dict_key == "right":
-      pol_scores[dict_key] /= lr_word_count
-    else:
-      pol_scores[dict_key] /= al_word_count
-  print(pol_scores)
-  return(pol_scores)
 def clean_tweet(tweet):
     regs = [
         r'(\/\/www[^\s]+)',

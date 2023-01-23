@@ -37,4 +37,5 @@ def scrape(user):
             tweets.append(tweet)
     f.close()
     return (tweets)
+
 scrape("ASCTEAlabama")
